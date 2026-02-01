@@ -1,70 +1,189 @@
-# Getting Started with Create React App
+# Vietpro Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ứng dụng web thương mại điện tử được xây dựng bằng React, Redux Toolkit và React Router. Đây là dự án thực hành để học tập và phát triển kỹ năng React.
 
-## Available Scripts
+## Giới thiệu
 
-In the project directory, you can run:
+Vietpro Store là một ứng dụng cửa hàng trực tuyến với đầy đủ tính năng quản lý state, routing và gọi API. Dự án được tổ chức theo kiến trúc component-based và sử dụng Redux để quản lý state toàn cục.
 
-### `npm start`
+## Công nghệ sử dụng
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Core Technologies
+- **React 18.2.0** - Thư viện UI component
+- **React Router DOM 6.4** - Routing cho Single Page Application
+- **Redux Toolkit 2.6.1** - Quản lý state
+- **React Redux 9.1.0** - Kết nối React với Redux
+- **Redux Persist 6.0.0** - Lưu trữ Redux state
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Additional Libraries
+- **Axios 1.6.7** - HTTP client để gọi API
+- **Moment 2.30.1** - Xử lý date/time
+- **Intl 1.2.5** - Internationalization
 
-### `npm test`
+### Styling
+- **CSS** - 21.8%
+- **SCSS** - 21.7%
+- **Less** - 20.8%
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Development Tools
+- **React Scripts 5.0.1** - Build tools và development server
+- **ESLint** - Code linting
+- **Jest & React Testing Library** - Testing framework
 
-### `npm run build`
+## Cấu trúc thư mục
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+my-react-app/
+├── public/              # File tĩnh public
+├── src/
+│   ├── pages/          # Các trang của ứng dụng
+│   ├── Routers/        # Cấu hình routing
+│   ├── redux-setup/    # Redux store và reducers
+│   ├── services/       # API services
+│   ├── shared/         # Components và utilities dùng chung
+│   ├── App.js          # Root component
+│   ├── index.js        # Entry point
+│   └── style.css       # Global styles
+├── .eslintrc.json      # ESLint configuration
+├── .gitignore          # Git ignore rules
+└── package.json        # Project dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Yêu cầu hệ thống
 
-### `npm run eject`
+- Node.js phiên bản 14.x trở lên
+- npm hoặc yarn
+- Trình duyệt hiện đại (Chrome, Firefox, Safari, Edge)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Cài đặt
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone repository về máy:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+git clone https://github.com/pulapily2208/my-react-app.git
+cd my-react-app
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Cài đặt dependencies:
 
-## Learn More
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Chạy ứng dụng
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Chế độ Development
 
-### Code Splitting
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Ứng dụng sẽ chạy tại [http://localhost:3000](http://localhost:3000)
 
-### Analyzing the Bundle Size
+### Build Production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm run build
+```
 
-### Making a Progressive Web App
+Tạo bản build tối ưu trong thư mục `build/`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Chạy Tests
 
-### Advanced Configuration
+```bash
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Chạy test runner trong chế độ interactive watch
 
-### Deployment
+### Eject Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+npm run eject
+```
 
-### `npm run build` fails to minify
+**Lưu ý**: Đây là thao tác một chiều. Sau khi eject, không thể quay lại!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Tính năng chính
+
+### State Management
+- Redux Toolkit để quản lý state hiệu quả
+- Redux Persist để lưu trữ state vào localStorage
+- Tổ chức state theo modules
+
+### Routing
+- React Router DOM v6 với routing hiện đại
+- Protected routes
+- Nested routing
+
+### API Integration
+- Axios để gọi API RESTful
+- Service layer riêng biệt
+- Error handling và loading states
+
+### Styling
+- Support nhiều CSS preprocessors (SCSS, Less)
+- Component-scoped styling
+- Responsive design
+
+### Code Quality
+- ESLint configuration
+- Consistent code style
+- Testing setup với Jest
+
+## Cấu trúc Components
+
+Dự án được tổ chức theo pattern:
+
+- **Pages**: Các trang chính của ứng dụng
+- **Shared**: Components tái sử dụng
+- **Routers**: Định nghĩa routes
+- **Redux-setup**: Store configuration và slices
+- **Services**: API calls và business logic
+
+## Scripts Package.json
+
+| Script | Mô tả |
+|--------|-------|
+| `npm start` | Khởi động development server |
+| `npm run build` | Build production |
+| `npm test` | Chạy test suite |
+| `npm run eject` | Eject từ Create React App |
+
+## Browser Support
+
+### Production
+- Các trình duyệt chiếm >0.2% thị phần
+- Loại trừ trình duyệt đã ngừng hỗ trợ
+- Không hỗ trợ Opera Mini
+
+### Development
+- Chrome phiên bản mới nhất
+- Firefox phiên bản mới nhất
+- Safari phiên bản mới nhất
+
+## Best Practices
+
+- Component composition và reusability
+- State management với Redux Toolkit
+- Code splitting và lazy loading
+- Proper error handling
+- Clean code và naming conventions
+
+## Đóng góp
+
+Đây là dự án cá nhân để thực hành và học tập React. Mọi góp ý và đóng góp đều được chào đón!
+
+## Liên hệ
+
+- GitHub: [@pulapily2208](https://github.com/pulapily2208)
+- Repository: [my-react-app](https://github.com/pulapily2208/my-react-app)
+
+## Ghi chú
+
+Dự án này được tạo với [Create React App](https://github.com/facebook/create-react-app) và được sử dụng cho mục đích học tập và thực hành React, Redux, và các công nghệ liên quan.
+
+## License
+
+Private project - For learning purposes only
